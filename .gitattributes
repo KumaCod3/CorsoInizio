@@ -3,5 +3,3 @@
 *.js.gz     binary
 *.symbols.json.gz binary
 *.wasm      binary
-Content-Length: totalBytes
-Content-Encoding: gzip
