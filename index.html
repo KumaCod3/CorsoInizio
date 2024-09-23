@@ -6,7 +6,6 @@
     <title>Unity WebGL Player | MyLittlePakman</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <Content-Encoding: gzip>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -57,15 +56,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/provaPackman.loader.js";
+      var loaderUrl = buildUrl + "/MyLilPackman.loader.js";
       var config = {
-        dataUrl: buildUrl + "/provaPackman.data.gz",
-        frameworkUrl: buildUrl + "/provaPackman.framework.js.gz",
-        codeUrl: buildUrl + "/provaPackman.wasm.gz",
+        dataUrl: buildUrl + "/MyLilPackman.data.unityweb",
+        frameworkUrl: buildUrl + "/MyLilPackman.framework.js.unityweb",
+        codeUrl: buildUrl + "/MyLilPackman.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "KumaCode",
         productName: "MyLittlePakman",
-        productVersion: "0.3",
+        productVersion: "0.3.1",
         showBanner: unityShowBanner,
       };
 
