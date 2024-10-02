@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Struttura;
-using UnityEngine.UI;
+using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class sparaCar : MonoBehaviour
+public class sparaCar: MonoBehaviour
 {
 	public GameObject prefabProiet;
 	public Sprite logo;
-    Arma proiettile;
+	Arma proiettile;
 	public List<Arma> _caricatore;
 	public int _index = 0;
-	public int _moltiplicatore=1000;
+	public int _moltiplicatore = 1000;
 	Camera cam;
 	public Canvas _schermata;
 	Image _logoRef;
@@ -44,9 +43,9 @@ public class sparaCar : MonoBehaviour
 		Mostra();
 	}
 	void Update()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
+	{
+		if (Input.GetMouseButtonDown(1))
+		{
 			RaycastHit info;
 			Ray rr = cam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
 			Physics.Raycast(rr, out info);
@@ -58,9 +57,9 @@ public class sparaCar : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.K))
 		{
 			_index--;
-			if (_index <0 )
+			if (_index < 0)
 			{
-				_index = _caricatore.Count-1;
+				_index = _caricatore.Count - 1;
 			}
 			proiettile = _caricatore[_index];
 			Mostra();
@@ -100,7 +99,7 @@ public class sparaCar : MonoBehaviour
 	}
 	public void Ricarica()
 	{
-		if (proiettile._proiettiliDiRiserva > 0 && proiettile._proiettiliNelCaricatore<proiettile._proiettiliMaxNelCaricatore)
+		if (proiettile._proiettiliDiRiserva > 0 && proiettile._proiettiliNelCaricatore < proiettile._proiettiliMaxNelCaricatore)
 		{
 			_nomeArma.SetText(proiettile._nomeArma);
 			proiettile._proiettiliNelCaricatore++;
@@ -115,8 +114,8 @@ public class sparaCar : MonoBehaviour
 	{
 		_logoRef.GetComponent<Image>().sprite = proiettile.logo;
 		_nomeArma.SetText(proiettile._nomeArma);
-		_proiettiliIn.SetText(proiettile._proiettiliNelCaricatore+"");
-		_proiettiliSu.SetText("/ "+proiettile._proiettiliMaxNelCaricatore);
-		_proiettiliRis.SetText(proiettile._proiettiliDiRiserva+"");
+		_proiettiliIn.SetText(proiettile._proiettiliNelCaricatore + "");
+		_proiettiliSu.SetText("/ " + proiettile._proiettiliMaxNelCaricatore);
+		_proiettiliRis.SetText(proiettile._proiettiliDiRiserva + "");
 	}
 }
