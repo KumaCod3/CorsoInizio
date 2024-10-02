@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TrisGameManager : MonoBehaviour
+public class TrisGameManager: MonoBehaviour
 {
 	public bool _turno = false;
 	static int[][] _board = new int[3][];
@@ -29,10 +27,10 @@ public class TrisGameManager : MonoBehaviour
 	}
 	private void Update()
 	{
-		if (_winner != 0 && _pause==false)
+		if (_winner != 0 && _pause == false)
 		{
 			pause();
-			
+
 			_wm.gameObject.SetActive(true);
 			_wm.vinci(_winner);
 			_tc.vince(_winner);
@@ -51,7 +49,7 @@ public class TrisGameManager : MonoBehaviour
 		}
 	}
 
-	
+
 	public void CambioTurno()
 	{
 		_turno = !_turno;
@@ -136,10 +134,5 @@ public class TrisGameManager : MonoBehaviour
 	{
 		_turno = true;
 		RePlay();
-	}
-	public void Esci()
-	{
-		Debug.Log("esco");
-		Application.Quit();
 	}
 }
