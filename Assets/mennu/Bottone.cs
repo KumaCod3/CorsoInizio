@@ -9,9 +9,8 @@ public class Bottone: MonoBehaviour
 	public void OnClick()
 	{
 		indice = dropD.GetComponent<indice>().getIndex();
-		PlayerPrefs.SetInt("gioco", indice);
 		desc.SetActive(true);
 		desc.GetComponent<ControllerDescrizioni>().setGame(indice);
-		gameObject.SetActive(false);
+		gameObject.transform.parent.gameObject.SetActive(false);
 	}
 }

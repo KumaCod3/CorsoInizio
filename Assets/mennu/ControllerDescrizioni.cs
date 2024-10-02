@@ -48,6 +48,6 @@ public class ControllerDescrizioni: MonoBehaviour
 		tits.SetText(titoli[x]);
 		des.SetText(descrizioni[x]);
 
-		//carica.
+		carica.GetComponent<StartGame>().indice = x;
 	}
 }
