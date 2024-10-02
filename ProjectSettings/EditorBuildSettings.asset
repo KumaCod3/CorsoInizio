@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/menu.unity
     guid: 6b60a4feecf2b4e43bc0779d12ea3703
-  - enabled: 0
-    path: Assets/prendiMoneta.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/GameMenu.unity
-    guid: e62d439c8589bb348a968c9092b1111f
   - enabled: 1
     path: Assets/packman.unity
     guid: 243ded2cba54e5443a0a68cd04167482
-  - enabled: 0
+  - enabled: 1
     path: Assets/Tiro.unity
     guid: 7872369703211e349bbcc4ee2dacfa5d
-  - enabled: 0
-    path: Assets/puntaEvai.unity
-    guid: 29da8ca461c4822498aa97e15a09e6b6
+  - enabled: 1
+    path: Assets/Popino.unity
+    guid: 3047ec0832b68fd49a866c52250945aa
+  - enabled: 1
+    path: Assets/TriS.unity
+    guid: db3f85617e7a3bc48aea37d8d7e8a5c4
+  - enabled: 1
+    path: Assets/Venditore.unity
+    guid: 457e5cc182c90ff4a82e96c2e2eaeeda
   m_configObjects: {}
