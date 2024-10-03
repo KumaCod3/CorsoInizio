@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class WinnerMenu : MonoBehaviour
+public class WinnerMenu: MonoBehaviour
 {
-	TextMeshProUGUI vinceX;
-	TextMeshProUGUI vinceO;
+	Image vinceX;
+	Image vinceO;
 	TextMeshProUGUI vinceN;
 	void Start()
 	{
-		vinceO = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-		vinceX = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+		vinceO = transform.GetChild(1).GetComponent<Image>();
+		vinceX = transform.GetChild(0).GetComponent<Image>();
 		vinceN = transform.GetChild(2).GetComponent<TextMeshProUGUI>();
 		vinceO.gameObject.SetActive(false);
 		vinceX.gameObject.SetActive(false);

@@ -7,8 +7,8 @@ using TMPro;
 public class TrisCamera : MonoBehaviour
 {
 	public TrisGameManager _tgm;
-	Color _rossoBG = new Color(120 / 255f, 24 / 255f, 31 / 255f);
-	Color _bluBG = new Color(17 / 255f, 31 / 255f, 70 / 255f);
+	Color _rossoBG = new Color(120 / 255f, 24 / 255f, 31 / 155f);
+	Color _bluBG = new Color(17 / 255f, 31 / 255f, 70 / 155f);
 	TextMeshProUGUI toccaX;
 	TextMeshProUGUI toccaO;
 	TextMeshProUGUI puntiX;

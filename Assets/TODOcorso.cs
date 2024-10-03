@@ -5,7 +5,7 @@ public class TODOcorso: MonoBehaviour
   * 
   * MENU:
   *		finisci testi descrizioni
-  *		rendi bello???
+  *		sistema scelta
   *		
   *		
   *	PACKMAN:
@@ -17,8 +17,6 @@ public class TODOcorso: MonoBehaviour
   *	POPINO:
   *		fai exit to main menu
   *		
-  *	TRIS:
-  *		rendi bello???
   *		
   *	VENDITORE:
   *		fai exit to main menu
