@@ -8,7 +8,7 @@ public class TODOcorso: MonoBehaviour
   *		
   *		
   *	PACKMAN:
-  *		fai bello
+  *		fai bello schermata fine
   *		traduci scritte
   *		
   * 

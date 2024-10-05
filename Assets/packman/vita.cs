@@ -67,7 +67,7 @@ public class vita: MonoBehaviour
 		{
 			if (x)
 			{
-				txt.text = "Time left: " + cont;
+				txt.text = "Time left for BONUS: " + cont;
 				yield return new WaitForSeconds(1f);
 				cont--;
 			}
