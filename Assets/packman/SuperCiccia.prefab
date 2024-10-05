@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8372660996618718651}
   - component: {fileID: 296244515336825494}
   - component: {fileID: 7862841143603965631}
+  - component: {fileID: 8619583023286719939}
   m_Layer: 0
   m_Name: SuperCiccia
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fcdd8d614179e0f4881760dcbc0141af, type: 2}
+  - {fileID: 2100000, guid: 8ad16c117caeefc4a8ab18bf45288860, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,3 +124,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c8a8600750f1649bde74624d5a342f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8619583023286719939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279221619002303528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7789e23c85678b42b551cb1e68493f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gonfia: 1

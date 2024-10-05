@@ -1,17 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class vita : MonoBehaviour
+public class vita: MonoBehaviour
 {
 	public GameObject supCic;
-    public int vite;
-    public int palle = 0;
+	public int vite;
+	public int palle = 0;
 	public bool vinto = false;
 	public bool morto = false;
 	public int totPall = 0;
-	int cont=10;
+	int cont = 10;
 	public int punti = 0;
 	public TextMeshProUGUI txt;
 	private void Update()
@@ -36,10 +35,6 @@ public class vita : MonoBehaviour
 		}
 	}
 
-	private void Start()
-	{
-
-	}
 	public void muori()
 	{
 		morto = true;
@@ -59,7 +54,7 @@ public class vita : MonoBehaviour
 		{
 			randZ = 1;
 		}
-		Vector3 position = new Vector3(randX*5, gameObject.transform.position.y, randZ*5);
+		Vector3 position = new Vector3(randX * 5, gameObject.transform.position.y, randZ * 5);
 		Quaternion rotation = gameObject.transform.rotation;
 		GameObject x = Instantiate(supCic, position, rotation);
 		StartCoroutine(conta(x));
@@ -67,8 +62,8 @@ public class vita : MonoBehaviour
 
 	private IEnumerator conta(GameObject x)
 	{
-		
-		for (int i=cont; i >= 0; i--)
+
+		for (int i = cont; i >= 0; i--)
 		{
 			if (x)
 			{

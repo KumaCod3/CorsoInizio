@@ -8,7 +8,9 @@ public class TODOcorso: MonoBehaviour
   *		
   *		
   *	PACKMAN:
-  *		fai exit to main menu
+  *		fai bello
+  *		traduci scritte
+  *		
   * 
   * TIRO:
   *		fai exit to main menu

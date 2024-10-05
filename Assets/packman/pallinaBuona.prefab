@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3669089592636440403}
   - component: {fileID: 3831232965995242709}
   - component: {fileID: -8227565830811882957}
+  - component: {fileID: 6839613028952809264}
   m_Layer: 0
   m_Name: pallinaBuona
   m_TagString: Untagged
@@ -110,3 +111,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2e63c93a0820040a4881a724dad734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6839613028952809264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221079336443046459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7789e23c85678b42b551cb1e68493f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotazione: 1
+  crescita: 0
+  tempo: 0.5
