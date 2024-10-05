@@ -5,7 +5,6 @@ public class TODOcorso: MonoBehaviour
   * 
   * MENU:
   *		finisci testi descrizioni
-  *		sistema scelta
   *		
   *		
   *	PACKMAN:
