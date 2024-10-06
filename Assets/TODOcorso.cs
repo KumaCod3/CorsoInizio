@@ -7,10 +7,6 @@ public class TODOcorso: MonoBehaviour
   *		finisci testi descrizioni
   *		
   *		
-  *	PACKMAN:
-  *		fai bello schermata fine
-  *		traduci scritte
-  *		
   * 
   * TIRO:
   *		fai exit to main menu

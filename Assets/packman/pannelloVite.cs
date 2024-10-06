@@ -12,7 +12,8 @@ public class pannelloVite: MonoBehaviour
 	bool vinto;
 	int palleTot;
 	int punti = 0;
-	int puntiMax = 350;
+	static int frutta = 0;
+	int puntiMax = 400;
 	int timer = 10;
 
 
@@ -20,13 +21,6 @@ public class pannelloVite: MonoBehaviour
 	{
 		finito.SetActive(false);
 		StartCoroutine(timeOut());
-		//transform.GetChild(3).gameObject.SetActive(false);
-		//transform.GetChild(4).gameObject.SetActive(false);
-		//transform.GetChild(5).gameObject.SetActive(true);
-		//transform.GetChild(6).gameObject.SetActive(false);
-		//transform.GetChild(7).gameObject.SetActive(false);
-		//transform.GetChild(10).gameObject.SetActive(false);
-		//aggiorna();
 	}
 	void Update()
 	{
@@ -58,7 +52,7 @@ public class pannelloVite: MonoBehaviour
 			int perc = calcolaPerc();
 			finito.SetActive(true);
 			finito.transform.GetChild(0).gameObject.SetActive(false);
-			finito.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "SUCCESS: " + perc + "%";
+			finito.GetComponent<panelPuntiPack>().mettiVal(punti, popino.GetComponent<vita>().totPall, frutta, perc);
 			return;
 		}
 		if (morto)
@@ -66,7 +60,7 @@ public class pannelloVite: MonoBehaviour
 			int perc = calcolaPerc();
 			finito.SetActive(true);
 			finito.transform.GetChild(1).gameObject.SetActive(false);
-			finito.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "SUCCESS: " + perc + "%";
+			finito.GetComponent<panelPuntiPack>().mettiVal(punti, popino.GetComponent<vita>().totPall, frutta, perc);
 			return;
 		}
 		for (int i = 0; i < vite; i++)
@@ -77,7 +71,7 @@ public class pannelloVite: MonoBehaviour
 		{
 			transform.GetChild(2).GetChild(i).gameObject.SetActive(true);
 		}
-		transform.GetChild(5).GetChild(1).GetComponent<TextMeshProUGUI>().text = "" + punti;
+		transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = "" + punti;
 		timer = timer + 3;
 	}
 
@@ -108,5 +102,9 @@ public class pannelloVite: MonoBehaviour
 			yield return new WaitForSeconds(1f);
 		}
 		popino.GetComponent<vita>().muori();
+	}
+	public static void mangiafrutta()
+	{
+		frutta++;
 	}
 }

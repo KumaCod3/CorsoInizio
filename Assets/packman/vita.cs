@@ -13,6 +13,7 @@ public class vita: MonoBehaviour
 	int cont = 10;
 	public int punti = 0;
 	public TextMeshProUGUI txt;
+	public static bool frut = false;
 	private void Update()
 	{
 		if (palle == 5)
@@ -20,11 +21,27 @@ public class vita: MonoBehaviour
 			palle = 0;
 			creaSuperCiccia();
 		}
+		//if (vite <= 0)
+		//{
+		//	muori();
+		//}
+		//if (totPall == 20 && !frut)
+		//{
+		//	vinto = true;
+		//	gameObject.SetActive(false);
+		//}
+		//if (gameObject.transform.position.y < -13)
+		//{
+		//	muori();
+		//}
+	}
+	private void LateUpdate()
+	{
 		if (vite <= 0)
 		{
 			muori();
 		}
-		if (totPall == 20)
+		if (totPall == 20 && !frut)
 		{
 			vinto = true;
 			gameObject.SetActive(false);
@@ -73,6 +90,7 @@ public class vita: MonoBehaviour
 			}
 		}
 		Destroy(x);
+		vita.frut = false;
 		txt.gameObject.SetActive(false);
 		cont = 10;
 	}
