@@ -9,7 +9,10 @@ public class TODOcorso: MonoBehaviour
   *		
   * 
   * TIRO:
+  *		fai popini pixel
   *		fai exit to main menu
+  *		sistema schermata win
+  *		retry
   *		
   *	POPINO:
   *		fai exit to main menu
