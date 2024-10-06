@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Retrry : MonoBehaviour
+public class Retrry: MonoBehaviour
 {
-    public void OnClick()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-    }
+	public int scena;
+	public void OnClick()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene(scena);
+	}
 }

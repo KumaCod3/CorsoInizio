@@ -7,7 +7,7 @@ public class BuildWalls : MonoBehaviour
     public GameObject muroX;
     public GameObject muroZ;
     public GameObject muri;
-    public SchermoPunti pann;
+    public SchermoPuntiTiro pann;
     public GameObject civile;
     [Range(0, 20)]
     public int numCivili;
@@ -23,8 +23,6 @@ public class BuildWalls : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
     
-
-    // Start is called before the first frame update
     void Start()
     {
         hotSpot.x = hotSpot.x + 50;
@@ -35,7 +33,6 @@ public class BuildWalls : MonoBehaviour
         mettiCiccia();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (pann.fine)
