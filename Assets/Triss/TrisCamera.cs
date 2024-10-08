@@ -1,14 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
-public class TrisCamera : MonoBehaviour
+public class TrisCamera: MonoBehaviour
 {
 	public TrisGameManager _tgm;
-	Color _rossoBG = new Color(120 / 255f, 24 / 255f, 31 / 155f);
-	Color _bluBG = new Color(17 / 255f, 31 / 255f, 70 / 155f);
+
+	GameObject scRosso;
+	GameObject scBlu;
+
+
+	//	Color _rossoBG = new Color(120 / 255f, 24 / 255f, 31 / 155f);
+	//	Color _bluBG = new Color(17 / 255f, 31 / 255f, 70 / 155f);
 	TextMeshProUGUI toccaX;
 	TextMeshProUGUI toccaO;
 	TextMeshProUGUI puntiX;
@@ -23,20 +25,28 @@ public class TrisCamera : MonoBehaviour
 		toccaX = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
 		puntiX = transform.GetChild(2).GetComponent<TextMeshProUGUI>();
 		puntiO = transform.GetChild(3).GetComponent<TextMeshProUGUI>();
+
 		toccaX.gameObject.SetActive(false);
 		toccaO.gameObject.SetActive(false);
+
+		scRosso = transform.GetChild(14).gameObject;
+		scBlu = transform.GetChild(15).gameObject;
 	}
 	void Update()
 	{
 		if (_tgm._turno)
 		{
-			gameObject.GetComponent<Image>().color = _rossoBG;
+			//		gameObject.GetComponent<Image>().color = _rossoBG;
+			scRosso.SetActive(true);
+			scBlu.SetActive(false);
 			toccaX.gameObject.SetActive(true);
 			toccaO.gameObject.SetActive(false);
 		}
 		else
 		{
-			gameObject.GetComponent<Image>().color = _bluBG;
+			//		gameObject.GetComponent<Image>().color = _bluBG;
+			scRosso.SetActive(false);
+			scBlu.SetActive(true);
 			toccaO.gameObject.SetActive(true);
 			toccaX.gameObject.SetActive(false);
 		}

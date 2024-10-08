@@ -15,7 +15,6 @@ public class WinnerMenu: MonoBehaviour
 		vinceO.gameObject.SetActive(false);
 		vinceX.gameObject.SetActive(false);
 		vinceN.gameObject.SetActive(false);
-
 	}
 
 	void Update()
