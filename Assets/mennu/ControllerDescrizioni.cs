@@ -14,8 +14,8 @@ public class ControllerDescrizioni: MonoBehaviour
 	void Start()
 	{
 		carica = gameObject.transform.GetChild(2).GetComponent<Button>();
-		titoli = new string[6];
-		descrizioni = new string[6];
+		titoli = new string[4];
+		descrizioni = new string[4];
 
 		titoli[0] = "";
 		descrizioni[0] = "";
@@ -31,14 +31,8 @@ public class ControllerDescrizioni: MonoBehaviour
 			"target takes away 20 points, and three seconds, each miss takes away 3 seconds. How many points can you score in 60 seconds ??? " +
 			"Pressing ESC will make you lose the game!";
 
-		titoli[3] = "pipino";
-		descrizioni[3] = "bla bla bla";
-
-		titoli[4] = "My Little TICtacToe";
-		descrizioni[4] = "";
-
-		titoli[5] = "venditore";
-		descrizioni[5] = "bla bvla kga akugh";
+		titoli[3] = "My Little TIC TAC TOE";
+		descrizioni[3] = "Just your average TIC TAC TOE. Choose who starts, and take turn to play locally.";
 
 	}
 

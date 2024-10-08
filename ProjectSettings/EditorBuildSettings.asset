@@ -15,12 +15,6 @@ EditorBuildSettings:
     path: Assets/Tiro.unity
     guid: 7872369703211e349bbcc4ee2dacfa5d
   - enabled: 1
-    path: Assets/Popino.unity
-    guid: 3047ec0832b68fd49a866c52250945aa
-  - enabled: 1
     path: Assets/TriS.unity
     guid: db3f85617e7a3bc48aea37d8d7e8a5c4
-  - enabled: 1
-    path: Assets/Venditore.unity
-    guid: 457e5cc182c90ff4a82e96c2e2eaeeda
   m_configObjects: {}
