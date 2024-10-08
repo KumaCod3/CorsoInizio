@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 788820851}
   - component: {fileID: 788820853}
   m_Layer: 5
-  m_Name: sfondo
+  m_Name: ScermoPunti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3050,10 +3050,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 62.064056
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 106.23329
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3086,8 +3086,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 179}
-  m_SizeDelta: {x: 1600, y: 818}
+  m_AnchoredPosition: {x: 0, y: 80}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1504268486
 GameObject:

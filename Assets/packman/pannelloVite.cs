@@ -46,7 +46,7 @@ public class pannelloVite: MonoBehaviour
 	public void aggiorna()
 	{
 		nascondiTutto();
-		transform.GetChild(3).GetComponent<TMPro.TextMeshProUGUI>().text = ("" + palleTot);
+		transform.GetChild(5).GetComponent<TMPro.TextMeshProUGUI>().text = ("" + palleTot);
 		if (vinto)
 		{
 			int perc = calcolaPerc();
@@ -65,13 +65,13 @@ public class pannelloVite: MonoBehaviour
 		}
 		for (int i = 0; i < vite; i++)
 		{
-			transform.GetChild(0).GetChild(i).gameObject.SetActive(true);
+			transform.GetChild(2).GetChild(i).gameObject.SetActive(true);
 		}
 		for (int i = palle; i < 5; i++)
 		{
-			transform.GetChild(2).GetChild(i).gameObject.SetActive(true);
+			transform.GetChild(4).GetChild(i).gameObject.SetActive(true);
 		}
-		transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = "" + punti;
+		transform.GetChild(7).GetComponent<TextMeshProUGUI>().text = "" + punti;
 		timer = timer + 3;
 	}
 
@@ -84,13 +84,13 @@ public class pannelloVite: MonoBehaviour
 
 	private void nascondiTutto()
 	{
-		for (int i = 0; i <= 6; i++)
-		{
-			transform.GetChild(0).GetChild(i).gameObject.SetActive(false);
-		}
-		for (int i = 0; i <= 4; i++)
+		for (int i = 0; i < transform.GetChild(2).childCount; i++)
 		{
 			transform.GetChild(2).GetChild(i).gameObject.SetActive(false);
+		}
+		for (int i = 0; i < transform.GetChild(4).childCount; i++)
+		{
+			transform.GetChild(4).GetChild(i).gameObject.SetActive(false);
 		}
 	}
 
@@ -98,7 +98,7 @@ public class pannelloVite: MonoBehaviour
 	{
 		for (; timer >= 0; timer--)
 		{
-			transform.GetChild(6).GetComponent<TextMeshProUGUI>().text = "" + timer;
+			transform.GetChild(8).GetComponent<TextMeshProUGUI>().text = "" + timer;
 			yield return new WaitForSeconds(1f);
 		}
 		popino.GetComponent<vita>().muori();
