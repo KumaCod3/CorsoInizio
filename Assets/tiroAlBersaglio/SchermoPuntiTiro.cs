@@ -24,8 +24,10 @@ public class SchermoPuntiTiro: MonoBehaviour
 	public bool fine = false;
 	public GameObject scherFine;
 	GameObject map;
+	int civiliON;
+	int nemiciON;
+	int bossON;
 
-	// Start is called before the first frame update
 	void Start()
 	{
 
@@ -33,6 +35,9 @@ public class SchermoPuntiTiro: MonoBehaviour
 		nemici = scrip.numBersagli;
 		boss = scrip.numSuper;
 		point = ((scrip.bersaglio.GetComponent<Bersaglio>().valore) * nemici) + ((scrip.bersaglioSuper.GetComponent<Bersaglio>().valore) * boss);
+		civiliON = scrip.numCivili;
+		nemiciON = scrip.numBersagli;
+		bossON = scrip.numSuper;
 
 		tempo = gameObject.transform.GetChild(5).GetComponent<TextMeshProUGUI>();
 		civ = gameObject.transform.GetChild(6).GetComponent<TextMeshProUGUI>();
@@ -59,7 +64,6 @@ public class SchermoPuntiTiro: MonoBehaviour
 		StartCoroutine(timeOut());
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		if (fine)
@@ -67,7 +71,8 @@ public class SchermoPuntiTiro: MonoBehaviour
 			map.SetActive(false);
 			int scor = (int)((float)poinFin / (float)point * 100f);
 			scherFine.SetActive(true);
-			// aaaaaa passa datiiiii
+			int[] dat = { civili, civiliON, nemici, nemiciON, boss, bossON, poinFin, point, scor };
+			scherFine.GetComponent<managerScerPuntFPS>().setDati(dat);
 		}
 	}
 	public void killEnem()
