@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TrisButt : MonoBehaviour
+public class TrisButt: MonoBehaviour
 {
 	public Sprite _nulla;
 	public Sprite _x;
@@ -23,7 +21,7 @@ public class TrisButt : MonoBehaviour
 
 	public void OnClick()
 	{
-		if (_inUso == false && _tgm._pause==false)
+		if (_inUso == false && _tgm._pause == false)
 		{
 			if (_tgm._turno)
 			{
@@ -31,15 +29,8 @@ public class TrisButt : MonoBehaviour
 				gameObject.GetComponent<Button>().GetComponent<Image>().sprite = _x;
 				actiAlpha(1);
 				_inUso = true;
-				_tgm.CambioTurno();
-			}
-			else
-			{
-				_chi = 2;
-				gameObject.GetComponent<Button>().GetComponent<Image>().sprite = _o;
-				actiAlpha(1);
-				_inUso = true;
-				_tgm.CambioTurno();
+				_tgm._turno = false;
+				_tgm.nTurni++;
 			}
 		}
 	}
@@ -57,4 +48,14 @@ public class TrisButt : MonoBehaviour
 		gameObject.GetComponent<Button>().GetComponent<Image>().sprite = _nulla;
 		actiAlpha(0);
 	}
+
+	public void schiscia()
+	{
+		_chi = 2;
+		gameObject.GetComponent<Button>().GetComponent<Image>().sprite = _o;
+		actiAlpha(1);
+		_inUso = true;
+		_tgm.nTurni++;
+	}
+
 }

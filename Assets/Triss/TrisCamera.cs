@@ -8,9 +8,6 @@ public class TrisCamera: MonoBehaviour
 	GameObject scRosso;
 	GameObject scBlu;
 
-
-	//	Color _rossoBG = new Color(120 / 255f, 24 / 255f, 31 / 155f);
-	//	Color _bluBG = new Color(17 / 255f, 31 / 255f, 70 / 155f);
 	TextMeshProUGUI toccaX;
 	TextMeshProUGUI toccaO;
 	TextMeshProUGUI puntiX;
@@ -32,25 +29,7 @@ public class TrisCamera: MonoBehaviour
 		scRosso = transform.GetChild(14).gameObject;
 		scBlu = transform.GetChild(15).gameObject;
 	}
-	void Update()
-	{
-		if (_tgm._turno)
-		{
-			//		gameObject.GetComponent<Image>().color = _rossoBG;
-			scRosso.SetActive(true);
-			scBlu.SetActive(false);
-			toccaX.gameObject.SetActive(true);
-			toccaO.gameObject.SetActive(false);
-		}
-		else
-		{
-			//		gameObject.GetComponent<Image>().color = _bluBG;
-			scRosso.SetActive(false);
-			scBlu.SetActive(true);
-			toccaO.gameObject.SetActive(true);
-			toccaX.gameObject.SetActive(false);
-		}
-	}
+
 	public void vince(int chi)
 	{
 		if (chi == 1)
@@ -63,5 +42,19 @@ public class TrisCamera: MonoBehaviour
 			vince2 += 1;
 			puntiO.SetText("" + vince2);
 		}
+	}
+	public void faiScBlu()
+	{
+		scRosso.SetActive(false);
+		scBlu.SetActive(true);
+		toccaO.gameObject.SetActive(true);
+		toccaX.gameObject.SetActive(false);
+	}
+	public void faiScRos()
+	{
+		scRosso.SetActive(true);
+		scBlu.SetActive(false);
+		toccaX.gameObject.SetActive(true);
+		toccaO.gameObject.SetActive(false);
 	}
 }
